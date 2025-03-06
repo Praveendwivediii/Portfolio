@@ -1,0 +1,81 @@
+import React from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Github, Linkedin } from 'lucide-react';
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-100 p-4">
+      {/* Header */}
+      <header className="text-center p-6 bg-white shadow-md rounded-2xl mb-6">
+        <h1 className="text-4xl font-bold text-gray-800">Your Name</h1>
+        <p className="text-lg text-gray-600">Aspiring Data Scientist | Python | SQL | Machine Learning</p>
+        <div className="flex justify-center space-x-4 mt-4">
+          <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-blue-500"><Mail size={24} /></a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black"><Github size={24} /></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700"><Linkedin size={24} /></a>
+        </div>
+      </header>
+
+      {/* About Me Section */}
+      <section className="mb-6">
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">About Me</h2>
+            <p className="text-gray-600">I am an aspiring Data Scientist with expertise in data analysis, machine learning, and programming. I enjoy working with Python, SQL, and creating insightful visualizations using tools like Power BI and Seaborn.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Skills Section */}
+      <section className="mb-6">
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Skills</h2>
+            <ul className="list-disc list-inside text-gray-600">
+              <li>Python, SQL, C++, JavaScript</li>
+              <li>Machine Learning & Predictive Modeling</li>
+              <li>Data Visualization (Power BI, Seaborn, Streamlit)</li>
+              <li>Database Management (MySQL)</li>
+              <li>Exploratory Data Analysis (EDA)</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Projects Section */}
+      <section className="mb-6">
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Projects</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {/* Project 1 */}
+              <div className="p-4 border rounded-lg">
+                <h3 className="text-xl font-bold text-gray-700">Project Title 1</h3>
+                <p className="text-gray-600">Brief description of your project, tools used, and key outcomes.</p>
+                <Button className="mt-2" variant="outline"><a href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer">View on GitHub</a></Button>
+              </div>
+
+              {/* Project 2 */}
+              <div className="p-4 border rounded-lg">
+                <h3 className="text-xl font-bold text-gray-700">Project Title 2</h3>
+                <p className="text-gray-600">Brief description of your project, tools used, and key outcomes.</p>
+                <Button className="mt-2" variant="outline"><a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer">View on GitHub</a></Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* Contact Section */}
+      <section>
+        <Card className="bg-white shadow-md rounded-2xl">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Contact</h2>
+            <p className="text-gray-600">Feel free to reach out via email or connect with me on LinkedIn for collaboration opportunities.</p>
+          </CardContent>
+        </Card>
+      </section>
+    </div>
+  );
+}
